@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Trello_all_tests" verbose="1" >
+    <test name="Regression" >
+        <classes>
+            <class name="com.gulchin.qa.tests.LoginTrelloTests" >
+                <methods>
+                    <exclude name="negativeAtlassianLoginWithputPasswordTest"/>
+                    <include name="atlassianLoginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

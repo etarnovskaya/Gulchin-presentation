@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Trello_all_tests" verbose="1" >
+    <test name="all" >
+        <classes>
+            <class name="com.gulchin.qa.tests.LoginTrelloTests" >
+
+            </class>
+            <class name="com.gulchin.qa.tests.BoardModificationTests" >
+
+            </class>
+        </classes>
+    </test>
+</suite>
