@@ -61,14 +61,15 @@ public class BoardHelper extends  HelperBase{
 //        System.out.println(menuButton.getCssValue("visibility"));
 //        if(menuButton.getCssValue("visibility").equals("visible")){
 //            click(By.cssSelector(".mod-show-menu"));
-        if(!isElementPresent(By.cssSelector(".js-open-more"))){
-            if(wd.findElement(By.cssSelector(".board-menu-header-back-button ")).isEnabled())
+        if(!isElementPresent(By.cssSelector(".js-open-more"))) {
+            if (wd.findElement(By.cssSelector(".board-menu-header-back-button ")).isEnabled()) {
 
-            click(By.cssSelector(".icon-back"));
+                click(By.cssSelector(".icon-back"));
 
 
-        }else {
-            click(By.xpath("//span[contains(., 'Show menu')]"));
+            } else {
+                click(By.xpath("//span[contains(., 'Show menu')]"));
+            }
         }
             click(By.cssSelector(".js-open-more"));
 
