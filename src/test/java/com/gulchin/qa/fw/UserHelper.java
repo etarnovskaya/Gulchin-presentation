@@ -3,6 +3,9 @@ package com.gulchin.qa.fw;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import com.gulchin.qa.model.User;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UserHelper extends  HelperBase{
     public UserHelper(WebDriver wd) {
@@ -68,6 +71,7 @@ public class UserHelper extends  HelperBase{
     }
 
     private void clickLogout() {
+        new WebDriverWait(wd, 30).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[data-test-id='header-member-menu-logout']")));
         click(By.cssSelector("[data-test-id='header-member-menu-logout']"));
     }
 

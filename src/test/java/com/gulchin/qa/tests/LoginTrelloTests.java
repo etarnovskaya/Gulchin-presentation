@@ -1,11 +1,15 @@
 package com.gulchin.qa.tests;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.gulchin.qa.model.User;
 
 public class LoginTrelloTests extends TestBase {
+
+
     @BeforeMethod
     public void ensurePreconditions(){
         if(app.getUser().isUserLoggedIn()){
@@ -17,6 +21,7 @@ public class LoginTrelloTests extends TestBase {
 
     @Test
     public void atlassianLoginTest() throws InterruptedException {
+
         app.getUser().startLogin();
         app.getUser().fillLoginForm(new User()
                 .setEmail("rochman.elena@gmail.com")
@@ -26,9 +31,10 @@ public class LoginTrelloTests extends TestBase {
         Assert.assertTrue(app.getHeader().isAvatarPresent());
         String accountEmail = app.getUser().getAccountEmail();
         Assert.assertEquals(accountEmail, "rochman.elena@gmail.com");
+
     }
 
-    @Test
+    @Test(enabled = false)
 
     public void negativeAtlassianLoginWithputPasswordTest() throws InterruptedException {
         app.getUser().startLogin();

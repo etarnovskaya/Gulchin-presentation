@@ -21,7 +21,7 @@ public class BoardModificationTests extends TestBase{
 //click on first board
         app.getBoard().clickOnTheFirstBoard();
 //change name
-        app.getBoard().changeName();
+        app.getBoard().changeName("jjj1");
 //return to home
 
     }

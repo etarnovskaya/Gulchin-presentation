@@ -20,12 +20,14 @@ public class BoardHelper extends  HelperBase{
     }
 
     public void clickOnTheFirstBoard() {
-        click(By.xpath("//*[@class = 'icon-lg icon-member']/../../..//li"));
+      //  click(By.xpath("//*[@class = 'icon-lg icon-member']/../../..//li"));
+        click(By.cssSelector("li.boards-page-board-section-list-item"));
+
     }
 
-    public void changeName() {
+    public void changeName(String boardName) {
         click(By.cssSelector("h1"));
-        wd.findElement(By.xpath("//*[contains(@class, 'js-board-name-input')]")).sendKeys( "jjj" + Keys.ENTER);
+        wd.findElement(By.xpath("//*[contains(@class, 'js-board-name-input')]")).sendKeys( boardName + Keys.ENTER);
     }
 
     public void openAdvancedMenu() {

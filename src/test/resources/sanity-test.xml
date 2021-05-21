@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Sanity" verbose="1">
+    <test name="Sanity">
+        <classes>
+            <class name="com.gulchin.qa.tests.LoginTrelloTests">
+                <methods>
+                    <include name="atlassianLoginTest"/>
+                    <exclude name="negativeAtlassianLoginWithputPasswordTest"/>
+                </methods>
+            </class>
+
+
+            <class name="com.gulchin.qa.tests.BoardCreationTest"/>
+            <class name="com.gulchin.qa.tests.BoardModificationTests"/>
+            <class name="com.gulchin.qa.tests.BoardDeletionTest"/>
+
+
+        </classes>
+    </test>
+
+
+</suite>
